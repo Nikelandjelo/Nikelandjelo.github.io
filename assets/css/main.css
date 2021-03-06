@@ -2509,6 +2509,10 @@ input, select, textarea {
 
 /* Image */
 
+	img.logo {
+		height:100%;
+	}
+
 	.image {
 		border-radius: 4px;
 		border: 0;
