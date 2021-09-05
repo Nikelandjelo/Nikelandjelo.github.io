@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/404.html</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/about/certsandawards</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/about/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/blog/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/about/worklife</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/coding/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/about/ctfs</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/ctfs/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/static/css/custom.css</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/donate/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/feed.xml</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/htb/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/linux/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/other/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/about/projects</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/robots.txt</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/search.json</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/sitemap.xml</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/about/skills</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/thm/</loc>
+    </url>
+
+    <url>
+        <loc>http://127.0.0.1:4000/nick/assets/css/style.css</loc>
+    </url>
+
+</urlset>

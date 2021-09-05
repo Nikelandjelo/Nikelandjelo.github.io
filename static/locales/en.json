@@ -1,0 +1,46 @@
+{
+  "website":{
+    "title": "Nick's blog"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Career",
+    "blog": "Blog",
+    "link": "Link"
+  },
+  "about_me":{
+    "about_me": "About Me",
+    "des": "I am Junior Security Engineer at CyberSift and student at Coventry University, studying Ethical Hacking and Cyber Security Msci (Hons)."
+  },
+  "skills":{
+    "my_skills": "My Skills"
+  },
+  "projects":{
+    "my_projects": "My Projects",
+    "laravel": "Web application created on Laravel framework. Also used are particles.js, Bootstrap, Vue.js and MySQL. The application represents a social media for ethical hacking and cybersecurity at Coventry University.",
+    "ocleap": "ocLE4P is a customizable Local Enumeration and Privilege Escalation tool based on Python. The project is performed by my teammates and me.",
+    "familycode": "The purpose of this project is to break through binaries password using the brute-force method."
+  },
+  "career":{
+    "my_career": "My Career",
+    "cybersift": "CyberSift",
+    "cybersift_des": "CyberSift is a boutique IT Solutions company that places emphasis on high quality, expertise and individualised service to each of our customers. While our focus is on IT Security, we complement this with a variety of skills which our customers can call upon, such as specialised  software, bespoke development and Cloud Services.",
+    "cybersift_date": "Aug. 2021",
+    "cybersift_job": "Junior Security Engineer",
+    "eniware": "EniWARE",
+    "eniware_des": "EniWARE Open Source Association is dedicated to the development and creation of modern software solutions in the context of Industry 4.0. As well as the cloud-based solutions and technologies that surround us increasingly. With us you can discover the world of communications, Big Data analysis, wireless data transfer technologies, server platforms and more.",
+    "eniware_date": "Jan. 2019 - Jun. 2020",
+    "eniware_job": "Junior Network Administrator (internship)"
+  },
+  "blog":{
+    "my_blog": "My Blog"
+  },
+  "link":{
+    "link": "Link",
+    "view": "views"
+  }
+
+}

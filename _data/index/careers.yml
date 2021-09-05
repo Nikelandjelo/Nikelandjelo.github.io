@@ -1,0 +1,30 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name:
+    detail: CyberSift
+    i18n: cybersift
+  desc:
+    detail: CyberSift is a boutique IT Solutions company that places emphasis on high quality, expertise and individualised service to each of our customers. While our focus is on IT Security, we complement this with a variety of skills which our customers can call upon, such as specialised  software, bespoke development and Cloud Services.
+    i18n: cybersift_desc
+  date:
+    detail: Aug. 2021
+    i18n: cybersift_date
+  job:
+    detail: Junior Security Engineer
+    i18n: cybersift_job
+  icon: fa-lock
+  present: true
+
+- name:
+    detail: EniWARE
+    i18n: eniware
+  desc:
+    detail: EniWARE Open Source Association is dedicated to the development and creation of modern software solutions in the context of Industry 4.0. As well as the cloud-based solutions and technologies that surround us increasingly. With us you can discover the world of communications, Big Data analysis, wireless data transfer technologies, server platforms and more.
+    i18n: eniware_desc
+  date:
+    detail: Jan. 2019 - Jun. 2020
+    i18n: eniware_date
+  job:
+    detail: Junior Network Administrator (internship)
+    i18n: eniware_job
+  icon: fa-server

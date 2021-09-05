@@ -1,0 +1,19 @@
+# carousel banners section
+# Add items for each banner image in the carousel
+#
+# Images are expected to be located in `static/assets/img/`.
+
+- src: landing/bg1.jpg
+  title: second banner image
+
+- src: landing/bg2.jpg
+  title: third banner image
+
+- src: landing/ctfBG.jpg
+  title: ctf banner image
+
+- src: landing/bg3.jpg
+  title: forth banner image
+
+- src: landing/htb.png
+  title: htb banner image

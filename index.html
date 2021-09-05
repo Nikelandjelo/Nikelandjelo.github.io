@@ -1,222 +1,68 @@
-<!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<link rel="shortcut icon" href="/images/logoHead.ico">
-		<title>Nick's Resume</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2430620279439153" crossorigin="anonymous"></script>
-        </head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
+---
+layout: blog
+title: index
+permalink: /
+---
 
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html"><img class="logo" src="images/logoHead.ico" /></a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="ctfs.html">CTFs</a></li>
-							<li><a href="experience.html">Experience</a></li>
-							<li><a href="skills.html">Skills</a></li>
-							<li><a href="CertsAndAwards.html">Certs & Awards</a></li>
-							<li>
-								<a href="projects.html">Projects</a>
-								<ul>
-									<li><a href="projects.html">Coming soon!</a></li>
-									<li>
-										<a href="projects.html#uni">University Projects</a>
-										<ul>
-											<li><a href="projects.html#TheCU3HBl0g">The CU3H Bl0g</a></li>
-											<li><a href="projects.html#ocLEAP">ocLEAP</a></li>
-											<li><a href="projects.html#Brute">Brute Osso Good</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</header>
+<div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+          {% for section in site.data.landing %}
+          <li>
+            {% if section.page %}
+              <a class="page-scroll" href="{{ section.page}} ">
+            {% else %}
+              <a class="page-scroll" href="{{ section.id | prepend: '#'}} ">
+            {% endif %}
+              <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
+            </a>
+          </li>
+          {% endfor %}
+          {% for language in site.data.index.language %}
+          <li>
+            <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
+              <img src="{{ language.flag | prepend: site.baseurl }}" height="16" width="16">
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+{% if site.index_carousel %}
+{% include carousel.html %}
+{% endif %}
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>Hello, I am Nikolay (Nick) Ivanov</h2>
-							<p>Student at Coventry University<br>
-								Ethical Hacking and Cybersecurity MSci (Hons)</p>
-						</header>
-						<span class="image"><img src="images/myPic.jpeg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- About me -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/bg1.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2>About me</h2>
-										<p>Student at Coventry University Ethical Hacking and Cybersecurity MSci (Hons) and <br>
-										Junior Security Engineer at CyberSift</p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>I am a young Cyber Security enthusiast and student.
-									I am highly interested in Networking, Programming, Vulnerability
-									Analysing, Web Hacking, etc. I have gained my experience through many
-									pieces of research related to CTFs, course work, a better understanding
-									of my university modules. Other contributing factors are personal
-									interest and hunger for new knowledge.</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>I have been interested in the technology field since I started
-									learning programming in C++ in high school. However, my interest in
-									cybersecurity began after I read the book "The Anonymous. Remember the 5th of November"
-									by Edouard Brasey. Since then, I have been learning more and more about
-									Penetration Testing, Cyber Security Analysis, etc.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- CTFs -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/bg2.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>CTFs</h2>
-							<p>One of the best methods of learning and practising cybersecurity for me are CTFs.</p>
-						</header>
-						<p>Most of the time, I use platforms like Hack The Box (HTB), TryHackMe (THM) and VulnHub.
-						But I am also interested in Blue Team CTF platforms like BlueTimeCTF. Furthermore, I have had
-						participated in a couple of CTFtime events.</p>
-						<ul class="actions">
-							<li><a href="ctfs.html" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Experience -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/bg3.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Experience</h2>
-							<p>Gaining professional experience is one of the great excitements for me.</p>
-						</header>
-						<p>My professional technical experience is in networking, network maintaining,
-							system monitoring and server maintaining. However, I am heavily interested
-							in gaining more experience in "red teaming" and penetration testing.</p>
-						<ul class="actions">
-							<li><a href="experience.html" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Skills -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>My best skills</h2>
-							<p>Without any doubt, my best skill is my willingness for new knowledge.</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon brands alt major fa-linux"></span>
-									<h3>Linux</h3>
-									<p>Linux is my OS of choice. I have three years of experience with different distributions.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon brands alt major fa-git"></span>
-									<h3>GIT</h3>
-									<p>GIT is a tool that I use for every project of mine.
-									Some of the best usages of GIT that I mastered are mobility, teamworking and project management.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon brands alt major fa-python"></span>
-									<h3>Python</h3>
-									<p>I have near four years of experience in scripting and programming with Python.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-terminal"></span>
-									<h3>Terminal</h3>
-									<p>The terminal is one of the prime tools that I am using for all kind of work.
-									Through the years of Linux usage, I learned to "live" there.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-network-wired"></span>
-									<h3>Networking</h3>
-									<p>I gained my base experience in networking through the period in EniWARE.
-									Furthermore, now I am working on CCNA by my CISCO course at Coventry University.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-calendar-alt"></span>
-									<h3>Time management</h3>
-									<p>One of the most useful skills that I developed during my high school years and still improving is time management.</p>
-								</section>
-							</div>
-						</div>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="skills.html" class="button">More about my skills</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://linkedin.com/in/nick1v" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/Nikelandjelo" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="mailto:nsashev_ivanov@protonmail.com" target="_blank" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<div class="container">
-						<ul class="actions special">
-							<li><a href="https://tryhackme.com/p/nIIk" target="_blank"><img src="https://tryhackme-badges.s3.amazonaws.com/nIIk.png" alt="TryHackMe"></a></li>
-							<li><a href="https://app.hackthebox.eu/profile/225910" target="_blank"><img src="http://www.hackthebox.eu/badge/image/225910" alt="Hack The Box"></a></li>
-						</ul>
-					</div>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-					</ul>
-
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-206674091-1"></script>
-			<script>
-			  window.dataLayer = window.dataLayer || [];
-			  function gtag(){dataLayer.push(arguments);}
-			  gtag('js', new Date());
-			
-			  gtag('config', 'UA-206674091-1');
-			</script>
-			<script src="https://www.googleoptimize.com/optimize.js?id=OPT-TV3QNTQ"></script>
-	</body>
-</html>
+{% for section in site.data.landing %}
+{% assign loopindex = forloop.index | modulo: 2 %}
+<section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0; background-color: #1c1d26;">
+  {% include sections/{{section.tpl}} %}
+</section>
+{% endfor %}
+<style>
+iframe {
+  -moz-transform: scale(0.25, 0.25);
+  -webkit-transform: scale(0.25, 0.25);
+  -o-transform: scale(0.25, 0.25);
+  -ms-transform: scale(0.25, 0.25);
+  transform: scale(0.25, 0.25);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+</style>
+<!-- <iframe src="https://www.maimemo.com/share/page/?uid=779139&pid=660" style="display: none;"></iframe> -->
