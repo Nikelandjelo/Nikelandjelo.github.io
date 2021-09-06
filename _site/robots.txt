@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: <https://nikelandjelo.github.io//sitemap.xml>
+Sitemap: <https://nikelandjelo.github.io/nick/sitemap.xml>
