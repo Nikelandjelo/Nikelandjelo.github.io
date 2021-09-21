@@ -13,7 +13,7 @@
   i18n: ocleap
   url: https://github.coventry.ac.uk/ivanovn/ocLEAP
   img: /static/assets/img/landing/ocLEAP.png
-  desc: ocLE4P is a customizable Local Enumeration and Privilege Escalation tool based on Python. The project is performed by my teammates and me.
+  desc: ocLE4P is a customizable Local Enumeration and Privilege Escalation tool based on Python. The project is performed by my teammates and I.
 
 - name: Brute Osso Good
   i18n: osso

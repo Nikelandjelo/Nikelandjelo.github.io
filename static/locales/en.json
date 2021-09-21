@@ -21,7 +21,7 @@
   "projects":{
     "my_projects": "My Projects",
     "laravel": "Web application created on Laravel framework. Also used are particles.js, Bootstrap, Vue.js and MySQL. The application represents a social media for ethical hacking and cybersecurity at Coventry University.",
-    "ocleap": "ocLE4P is a customizable Local Enumeration and Privilege Escalation tool based on Python. The project is performed by my teammates and me.",
+    "ocleap": "ocLE4P is a customizable Local Enumeration and Privilege Escalation tool based on Python. The project is performed by my teammates and I.",
     "familycode": "The purpose of this project is to break through binaries password using the brute-force method."
   },
   "career":{
