@@ -68,3 +68,4 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+include: [".well-known"] #Brave Rewards Verification
