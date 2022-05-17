@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: nikelandjelo.github.io
-Token: 7b96cd08fc54f6b2083b204d672b967dba8609f1f09dcad8d9ab9d8ab847d294
+Token: bd0e45a1934f6eb0e902511c6b34332af6ecc5dcaaed8b9772af1965719239e8
