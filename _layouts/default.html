@@ -4,6 +4,7 @@ layout: compress
 
 <!DOCTYPE html>
 <html lang="en">
+    {% gtm head %}
 
     {% if page.dir == '/about/' %}
         {% include about_head.html %}
@@ -15,10 +16,7 @@ layout: compress
 
 <body id="page-top" class="landing-page" style="background-color: #1c1d26;">
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDL2B6V"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    {% gtm body %}
 
     {% if page.dir == '/about/' %}
         {% include about_header.html %}
