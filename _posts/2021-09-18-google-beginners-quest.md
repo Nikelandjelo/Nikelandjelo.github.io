@@ -56,9 +56,17 @@ You have now investigated the chemical plant. Nothing seemed to be out of the or
 https://cctv-web.2021.ctfcompetition.com/
 ```
 Our first task is taking us to this URL with a password prompt. If we check the source code, we can see that the authentication is on the client level. Great, so now we have to play with this JS.
+
+
 <img alt="clng1" src="/static/assets/img/blog/ctfs/2021-googlebq/C1-1.png" width="100%" />
+
+
 If we have a look closely, we can see that the page we are trying to access has the same name as the password, so we can't just delete the authentication script to bypass the password. However, the algorithm for checking the password is quite easy to reverse.
+
+
 <img alt="clng1" src="/static/assets/img/blog/ctfs/2021-googlebq/C1-2.png" width="50%" />
+
+
 If we want to play around, we can always get this piece of code and brute force the password.
 
 ```js
