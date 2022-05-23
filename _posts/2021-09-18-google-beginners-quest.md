@@ -118,41 +118,7 @@ It turned out suspect's appartment has an electronic lock. After analyzing the P
 ```
 <img alt="Lock" src="/static/assets/img/blog/ctfs/2021-googlebq/logic-lock.png" width="100%" />
 <p style="font-size: 16px">This challenge doesn't even deserve an explanation. In a nutshell, follow the logical operation. The goal is to get a signal or a 1 at the end. If you need help with logical operations, <a href="https://www.computerhope.com/jargon/l/logioper.htm" target="_blink">this article</a> might be helpful</p>
-```
-                    _
-0-A------------NOR=>A+B---------------------\
---              |                           |
---         _    |                           |
-1-B---NOT=>B----/                           |
---                                          |        _      _ _
---                                          +--AND=>(A+B)(C+D+E+F)--\
---         _      _                         |                       |
-1-C---NOT=>C--OR=>C+D------\                |                       |
---            |            |                |                       |
---            |            |                |                       |
-0-D-----------/            |         _ _    |                       |
---                         +--NOR+>C+D+E+F--/                       |
---                         |                                        |
---                  _      |                                        |
-0-E-----------OR=>E+F------/                                        |
---            |                                                     |
---         _  |                                                     |
-1-F---NOT=>F--/                                                     |
---                                                                  |         _      _ _       _ _
---                                                                  +--AND=>{(A+B)(C+D+E+F)}{[(G+H)(H⊕I)](IJ)}
---                 _ _           _ _                                |-----------x--x-----x----------x-x---xx-- = BCFIJ
-0-G-----------NOR=>G+H-----AND=>(G+H)(H⊕I)--\                       |
---        _____/           |                |                       |
---       /                 |                |                       |
-0-H------+----XOR=>H⊕I-----/                |                       |
---              |                           |         _ _           |
---              |                           +--AND=>[(G+H)(H⊕I)](IJ)-/
---              |                           |
-1-I------+------/                           |
---       \______                            |
---              \                           |
-1-J------------AND=>IJ----------------------/
-```
+<img alt="Diagram" src="/static/assets/img/blog/ctfs/2021-googlebq/C2-2.png" width="100%" />
 `Flag: CTF{BCFIJ}`
 <br />
 
