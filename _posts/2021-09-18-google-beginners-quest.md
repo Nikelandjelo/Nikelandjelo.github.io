@@ -21,13 +21,13 @@ icon: icon-google-alt
 <br />
 
 # Intro <a name="intro"></a>
-<p style="font-size: 16px">So, I missed the <a href="https://capturetheflag.withgoogle.com/" target="_blink">Google CTF</a>, but I decided to give the Beginners Quest a go. So far, I got to challenge 10, with 6 and 8 currently unsolved (Future lesson: If the CTF has a "quest" in its name, you will need to solve the challenges in a set order...).<br />
+So, I missed the <a href="https://capturetheflag.withgoogle.com/" target="_blink">Google CTF</a>, but I decided to give the Beginners Quest a go. So far, I got to challenge 10, with 6 and 8 currently unsolved (Future lesson: If the CTF has a "quest" in its name, you will need to solve the challenges in a set order...).<br />
 Every challenge, if there’s a need - contains an attachment - an archive file with its SHA256 hash as a filename.
 <br />
-So, this is the map of the CTF:</p>
+So, this is the map of the CTF:
 <img alt="MAP" src="/static/assets/img/blog/ctfs/2021-googlebq/map.png" width="100%" />
 <br />
-<p style="font-size: 16px">And there is the order of all the challenges I got to, including the codes for each level:</p>
+And there is the order of all the challenges I got to, including the codes for each level:
 
 ```
 1   =   2NFXHZYW
@@ -55,11 +55,11 @@ You have now investigated the chemical plant. Nothing seemed to be out of the or
 
 https://cctv-web.2021.ctfcompetition.com/
 ```
-<p style="font-size: 16px">Our first task is taking us to this URL with a password prompt. If we check the source code, we can see that the authentication is on the client level. Great, so now we have to play with this JS.</p>
+Our first task is taking us to this URL with a password prompt. If we check the source code, we can see that the authentication is on the client level. Great, so now we have to play with this JS.
 <img alt="clng1" src="/static/assets/img/blog/ctfs/2021-googlebq/C1-1.png" width="100%" />
-<p style="font-size: 16px">If we have a look closely, we can see that the page we are trying to access has the same name as the password, so we can't just delete the authentication script to bypass the password. However, the algorithm for checking the password is quite easy to reverse.</p>
+If we have a look closely, we can see that the page we are trying to access has the same name as the password, so we can't just delete the authentication script to bypass the password. However, the algorithm for checking the password is quite easy to reverse.
 <img alt="clng1" src="/static/assets/img/blog/ctfs/2021-googlebq/C1-2.png" width="50%" />
-<p style="font-size: 16px">If we want to play around, we can always get this piece of code and brute force the password.</p>
+If we want to play around, we can always get this piece of code and brute force the password.
 
 ```js
 const v = "GoodPassword";
@@ -85,11 +85,11 @@ else {
 }
 ```
 
-<p style="font-size: 16px">However, it will be much easier and faster if we just write a script to get the password for us. So the way the authentication works is:<br />
+However, it will be much easier and faster if we just write a script to get the password for us. So the way the authentication works is:<br />
 - Get the password from the password field.<br />
 - Makes an array for the password where every character of the password is added with the hex value `CAFE`.<br />
 - Every item from the array is being compared with a specific value.<br />
-So, what we need to do is put the comparison values in the order in a list, subtract the value `CAFE` and get our password.</p>
+So, what we need to do is put the comparison values in the order in a list, subtract the value `CAFE` and get our password.
 
 ```py
 pas = (52037, 52077, 52077, 52066, 52046, 52063, 52081, 52081, 52085, 52077, 52080, 52066)
@@ -117,7 +117,7 @@ Challenge: Logic Lock (misc)
 It turned out suspect's appartment has an electronic lock. After analyzing the PCB and looking up the chips you come to the conclusion that it's just a set of logic gates!
 ```
 <img alt="Lock" src="/static/assets/img/blog/ctfs/2021-googlebq/logic-lock.png" width="100%" />
-<p style="font-size: 16px">This challenge doesn't even deserve an explanation. In a nutshell, follow the logical operation. The goal is to get a signal or a 1 at the end. If you need help with logical operations, <a href="https://www.computerhope.com/jargon/l/logioper.htm" target="_blink">this article</a> might be helpful</p>
+This challenge doesn't even deserve an explanation. In a nutshell, follow the logical operation. The goal is to get a signal or a 1 at the end. If you need help with logical operations, <a href="https://www.computerhope.com/jargon/l/logioper.htm" target="_blink">this article</a> might be helpful.
 <img alt="Diagram" src="/static/assets/img/blog/ctfs/2021-googlebq/C2-2.png" width="100%" />
 `Flag: CTF{BCFIJ}`
 <br />
@@ -135,8 +135,8 @@ You chase them through city streets until you reach the high way. The traffic is
 https://high-speed-chase-web.2021.ctfcompetition.com/
 ```
 <img alt="clng3" src="/static/assets/img/blog/ctfs/2021-googlebq/C3-2.png" width="100%" />
-<p style="font-size: 16px">The link for this task is getting us to a page with a car game. There is a text field and hints on how to make a function next to it.<br />
-According to the hints:</p>
+The link for this task is getting us to a page with a car game. There is a text field and hints on how to make a function next to it.<br />
+According to the hints:
 
 ```
 Car Self-Driving Interface
@@ -164,14 +164,14 @@ The controlCar must return an integer denoting where the car should drive:
 0: continue straight / straighten up the car,
 1 (or any other positive value): drive more to the right.
 ```
-<p style="font-size: 16px">Furthermore, this picture is included:</p>
+Furthermore, this picture is included:
 <img alt="clng3" src="/static/assets/img/blog/ctfs/2021-googlebq/task3explained.png" width="100%" />
-<p style="font-size: 16px">Digging into the source, we can find the function that is taking our code and executing it:</p>
+Digging into the source, we can find the function that is taking our code and executing it:
 <img alt="clng3" src="/static/assets/img/blog/ctfs/2021-googlebq/C3-1.png" width="50%" />
-<p style="font-size: 16px">So it seems this is a coding challenge, and we are expected to make the things work instead of breaking them.<br />
+So it seems this is a coding challenge, and we are expected to make the things work instead of breaking them.<br />
 If that's the case, we can just start thinking of a solution.
 The hint is clear on how everything is working. By using <code>alert(scanArray)</code>, we can make sure that the array is working as explained in the description. So to get to the end, we need to either avoid the closest object or try to chaise the furthest one.<br />
-The solution I got to (with the worse JS skills ever) I am trying to avoid the closest objects. So the source contains two "if" statements - one checking if there is an object on the left and one that checks if there is an object on the right. If any of the statements return true, another "if" statement is triggered, which checks if there are two lines taken on the same side or just one. In the end, a return function returns the value, which will take the car away from the closes object.</p>
+The solution I got to (with the worse JS skills ever) I am trying to avoid the closest objects. So the source contains two "if" statements - one checking if there is an object on the left and one that checks if there is an object on the right. If any of the statements return true, another "if" statement is triggered, which checks if there are two lines taken on the same side or just one. In the end, a return function returns the value, which will take the car away from the closes object.
 <img alt="clng3" src="/static/assets/img/blog/ctfs/2021-googlebq/C3-end.gif" width="100%" />
 
 ```js
@@ -186,7 +186,7 @@ if(scanArray[6]<12 && scanArray[7]<12){
 return 0;
 ```
 
-<p style="font-size: 16px">There is another solution that works with the opposite logic. (The car is chasing the furthest object)[Credits to Ben!]</p>
+There is another solution that works with the opposite logic. (The car is chasing the furthest object)[Credits to Ben!]
 
 ```js
 if (scanArray.indexOf(Math.max(...scanArray)) + 1> 8) {
