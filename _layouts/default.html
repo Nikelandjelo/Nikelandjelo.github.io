@@ -4,7 +4,7 @@ layout: compress
 
 <!DOCTYPE html>
 <html lang="en">
-    {% gtm head %}
+    {% include analytics_head.html %}
 
     {% if page.dir == '/about/' %}
         {% include about_head.html %}
@@ -15,8 +15,7 @@ layout: compress
     {% endif %}
 
 <body id="page-top" class="landing-page" style="background-color: #1c1d26;">
-
-    {% gtm body %}
+    {% include analytics_body.html %}
 
     {% if page.dir == '/about/' %}
         {% include about_header.html %}
