@@ -2,18 +2,32 @@
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
     detail: CyberSift
+    i18n: cybersift_intern
+  desc:
+    detail: As part of my university course, I have been given the opportunity to take part in a placement year. Due to me already working for CyberSift over the past 10+ months, I have decided to continue my work. I have made this decision based on my wiling to learn more from my team and mentors. Moreover, loyalty is a fundamental value that I hold close, and I would like to see and participate in the growth of the company.
+    i18n: cybersift_desc_intern
+  date:
+    detail: Jun. 2022 - Jun. 2023
+    i18n: cybersift_date_intern
+  job:
+    detail: Junior Security Engineer | Intern (University Placement Year)
+    i18n: cybersift_job_intern
+  icon: fa-lock
+  present: true
+
+- name:
+    detail: CyberSift
     i18n: cybersift
   desc:
     detail: CyberSift is a boutique IT Solutions company that places emphasis on high quality, expertise and individualised service to each of our customers. While our focus is on IT Security, we complement this with a variety of skills which our customers can call upon, such as specialised  software, bespoke development and Cloud Services.
     i18n: cybersift_desc
   date:
-    detail: Aug. 2021
+    detail: Aug. 2021 - Jun. 2022
     i18n: cybersift_date
   job:
     detail: Junior Security Engineer
     i18n: cybersift_job
   icon: fa-lock
-  present: true
 
 - name:
     detail: EniWARE

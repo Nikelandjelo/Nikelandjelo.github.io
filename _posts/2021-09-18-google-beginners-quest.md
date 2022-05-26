@@ -173,14 +173,25 @@ The controlCar must return an integer denoting where the car should drive:
 1 (or any other positive value): drive more to the right.
 ```
 Furthermore, this picture is included:
+
+
 <img alt="clng3" src="/static/assets/img/blog/ctfs/2021-googlebq/task3explained.png" width="100%" />
+
+
 Digging into the source, we can find the function that is taking our code and executing it:
+
+
 <img alt="clng3" src="/static/assets/img/blog/ctfs/2021-googlebq/C3-1.png" width="50%" />
+
+
 So it seems this is a coding challenge, and we are expected to make the things work instead of breaking them.<br />
 If that's the case, we can just start thinking of a solution.
 The hint is clear on how everything is working. By using <code>alert(scanArray)</code>, we can make sure that the array is working as explained in the description. So to get to the end, we need to either avoid the closest object or try to chaise the furthest one.<br />
 The solution I got to (with the worse JS skills ever) I am trying to avoid the closest objects. So the source contains two "if" statements - one checking if there is an object on the left and one that checks if there is an object on the right. If any of the statements return true, another "if" statement is triggered, which checks if there are two lines taken on the same side or just one. In the end, a return function returns the value, which will take the car away from the closes object.
+
+
 <img alt="clng3" src="/static/assets/img/blog/ctfs/2021-googlebq/C3-end.gif" width="100%" />
+
 
 ```js
 if(scanArray[9]<12 && scanArray[10]<12){
