@@ -11,13 +11,13 @@ icon: icon-google-alt
 # Table of contents
 <br />
 
-### * [Intro](#intro)
-### * [Challenge 1](#clng1)
-### * [Challenge 2](#clng2)
-### * [Challenge 3](#clng3)
-### * [Challenge 4](#clng4)
-### * [Challenge 5](#clng5)
-### * [Challenge 7](#clng7)
+### [Intro](#intro)
+### [Challenge 1](#clng1)
+### [Challenge 2](#clng2)
+### [Challenge 3](#clng3)
+### [Challenge 4](#clng4)
+### [Challenge 5](#clng5)
+### [Challenge 7](#clng7)
 <br />
 
 # Intro <a name="intro"></a>

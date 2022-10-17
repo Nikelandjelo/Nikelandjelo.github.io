@@ -1,20 +1,20 @@
 # blog page sections
-- name: Blog
-  href: /blog/
+#- name: Blog
+#  href: /blog/
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
-- name: CTF
-  href: /ctf/
+#- name: CTF
+#  href: /ctf/
 
-- name: Software
-  href: /software/
+#- name: Software
+#  href: /software/
 
-- name: Hardware
-  href: /hardware/
+#- name: Hardware
+#  href: /hardware/
 
-- name: Others
-  href: /others/
+#- name: Others
+#  href: /others/
 
 # Don't display donation page: change donation to off at file '_config.yml'
-- name: Donate
-  href: /donate/
+#- name: Donate
+#  href: /donate/
